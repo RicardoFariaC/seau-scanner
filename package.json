@@ -4,6 +4,7 @@
   "main": "server.ts",
   "scripts": {
     "dev": "npx prisma generate && nodemon src/server.ts",
+    "migrate:dev": "npx prisma migrate dev",
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
