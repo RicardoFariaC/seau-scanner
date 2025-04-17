@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Entrar | SEAU Credenciamento</title>
+</head>
+<body>
+    <img src="../static/jornadas.png" alt="" srcset="" class="absolute top-0 left-1/2 transform -translate-x-1/2 mt-4 w-4/5 md:w-1/4">
+    <form method="post" id="mainform" class="h-screen">
+        <div class="flex bg-midnight h-full w-full items-center justify-center">
+            <div class="bg-midnight m-2 p-4 border-2 border-sand">
+                <h3 class="mb-2.5 text-2xl text-center text-sand">Faça o login com as credenciais do evento</h3>
+                <!-- FORM -->
+                <label for="login" class="text-sand">Login</label>
+                <input type="text" name="login" id="login" placeholder="J00"
+                    class="mb-2.5 w-full px-2 py-3 rounded-md text-2xl text-sand border-1"
+                    required
+                >
+
+                <label for="senha" class="text-sand">Senha</label>
+                <input type="text" name="senha" id="senha" placeholder="*****"
+                    class="mb-2.5 w-full px-2 py-3 rounded-md text-2xl text-sand border-1"
+                    required
+                >
+                
+                <button id="send" class="text-sand mt-2.5 p-3 rounded-md w-full bg-sand-steel text-2xl">Entrar</button>
+                <!-- END FORM -->
+
+                <div id="error" class="mt-2 flex items-center justify-center text-sand text-xl"></div>
+            </div>
+        </div>
+    </form>  
+</body>
+<script src="index.js"></script>
+</html>

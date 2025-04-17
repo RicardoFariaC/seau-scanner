@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+    --color-sand: #cac2b6;
+    --color-midnight: #04173b;
+    --color-sand-steel: #5c6573; 
+}

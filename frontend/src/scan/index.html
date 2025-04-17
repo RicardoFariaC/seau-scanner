@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/src/output.css">
+    <title>Verificação | SEAU Credenciamento</title>
+</head>
+<body class="bg-midnight">
+    <form method="post" class="h-screen flex flex-col items-end">
+        <div class="flex items-center justify-center w-full">
+            <h1 class="text-sand text-2xl">Verificação de Credenciamento</h1>
+        </div>
+        <div class=" text-sand text-2xl">
+            <button class="m-4 p-2 border-1 border-sand active:bg-sand active:text-midnight">SAIR</button>
+        </div>
+        <div class="flex flex-col w-full">
+            <div id="reader" class="font-bold flex flex-col bg-sand-steel text-sand w-full m-2 border-2 border-sand">
+            </div>
+            <p id="errortag"></p>
+            <div id="result" class="flex items-center justify-center">
+                <div class="">
+                    <img id="img" class="w-16 h-20 mx-2"/>
+                </div>
+                <div class="text-sand text-2xl">
+                    <p id="nome"></p>
+                    <p id="ra" class="font-bold"></p>
+                    <p id="turma" class="font-bold"></p>
+                </div>
+            </div>
+            <div class="flex items-center justify-center">
+                <button id="btn-confirm" 
+                class="m-4 p-2 border-1 text-sand font-bold
+                    border-sand active:bg-sand active:text-midnight
+                    disabled:hidden
+                 " disabled
+                    type="button"
+                >
+                    CONFIRMAR
+                </button>
+                <button id="btn-cancel" 
+                class="m-4 p-2 border-1 text-sand font-bold
+                    border-sand active:bg-sand active:text-midnight
+                    disabled:hidden
+                 " disabled
+                    type="button"
+                >
+                    CANCELAR
+                </button>
+            </div>
+        </div>
+    </form>  
+</body>
+<script src="../../node_modules/html5-qrcode/html5-qrcode.min.js" type="text/javascript">
+</script>
+<script src="scan.js">
+
+</script>
+</html>
