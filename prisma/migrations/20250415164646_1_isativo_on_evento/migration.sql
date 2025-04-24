@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `Evento` ADD COLUMN `isAtivo` BOOLEAN NOT NULL DEFAULT true;
