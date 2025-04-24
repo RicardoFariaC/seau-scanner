@@ -1,0 +1,27 @@
+services:
+  server:
+    container_name: seau.server
+    env_file:
+      - .container.env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # command: sh -c "npm run migrate:dev"
+    ports:
+      - "5123:5123"
+    depends_on:
+      - db
+  db:
+    container_name: seau.db
+    image: mysql:lts
+    restart: always
+    env_file:
+      - .db.env
+    volumes:
+      - reports:/home/mysql/app
+    ports:
+      - "3306:3306"
+
+
+volumes:
+  reports:

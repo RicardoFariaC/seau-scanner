@@ -1,0 +1,376 @@
+{
+  "meta": {
+    "format": "httpie",
+    "version": "1.0.0",
+    "contentType": "collection",
+    "schema": "https://schema.httpie.io/1.0.0.json",
+    "docs": "https://httpie.io/r/help/export-from-httpie",
+    "source": "HTTPie Desktop 2025.2.0"
+  },
+  "entry": {
+    "name": "SEAU",
+    "icon": {
+      "name": "creditCard",
+      "color": "green"
+    },
+    "auth": {
+      "type": "none"
+    },
+    "requests": [
+      {
+        "name": "/ping",
+        "url": "{{L}}:5123/ping",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "none",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "/login",
+        "url": "{{L}}:5123/login",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"login\": \"j21\",\n  \"senha\": \"j21-seau\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "/evento",
+        "url": "{{L}}:5123/evento",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "bearer",
+          "target": "headers",
+          "credentials": {
+            "username": "",
+            "password": "eyJhbGciOiJIUzI1NiJ9.eyJldmVudG8iOnsiaWQiOjExLCJsb2dpbiI6ImoxMSJ9LCJpYXQiOjE3NDQ3Mzk1MDksImV4cCI6MTc0NDc0NjcwOX0.JSdZl90wZSIndQj05KNRHaRRWZY0d4nW6syZYqlHHQo"
+          }
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"id\": 11,\n  \"nome\": \"Aprenda a criar aplicativos web e mobile com o Cursor (ferramenta de IA low code)\",\n  \"data_periodo\": \"2025-05-14T21:00:00-03:00\",\n  \"login\": \"j11\",\n  \"senha\": \"j11-seau\",\n  \"tipoId\": 1\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "/evento",
+        "url": "{{L}}:5123/evento",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "bearer",
+          "target": "headers",
+          "credentials": {
+            "username": "",
+            "password": "eyJhbGciOiJIUzI1NiJ9.eyJldmVudG8iOnsiaWQiOjExLCJsb2dpbiI6ImoxMSJ9LCJpYXQiOjE3NDQ3Mzk1MDksImV4cCI6MTc0NDc0NjcwOX0.JSdZl90wZSIndQj05KNRHaRRWZY0d4nW6syZYqlHHQo"
+          }
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"id\": 21,\n  \"nome\": \"Aprenda a criar aplicativos web e mobile com o Cursor (ferramenta de IA low code)\",\n  \"data_periodo\": \"2025-05-14T21:00:00.000Z\",\n  \"login\": \"j21\",\n  \"senha\": \"j21-seau\",\n  \"tipoId\": 1\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "/tipo",
+        "url": "{{L}}:5123/tipo",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "none",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "/tipo",
+        "url": "{{L}}:5123/tipo",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"nome\": \"Palestra\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "/chamada",
+        "url": "{{L}}:5123/chamada/",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "bearer",
+          "target": "headers",
+          "credentials": {
+            "username": "",
+            "password": "eyJhbGciOiJIUzI1NiJ9.eyJldmVudG8iOnsiaWQiOjExLCJsb2dpbiI6ImoxMSJ9LCJpYXQiOjE3NDUwMjM3NzAsImV4cCI6MTc0NTAzMDk3MH0._1xVGbmjnk85D1vyR5m-uyyXNVJS-yX401aONIM1SpE"
+          }
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"nome\": \"Palestra\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "/chamada/(d)",
+        "url": "{{L}}:5123/chamada/11",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "bearer",
+          "target": "headers",
+          "credentials": {
+            "username": "",
+            "password": "eyJhbGciOiJIUzI1NiJ9.eyJldmVudG8iOnsiaWQiOjExLCJsb2dpbiI6ImoxMSJ9LCJpYXQiOjE3NDUwMjM3NzAsImV4cCI6MTc0NTAzMDk3MH0._1xVGbmjnk85D1vyR5m-uyyXNVJS-yX401aONIM1SpE"
+          }
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"nome\": \"Palestra\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "/chamada/turma/(s)",
+        "url": "{{L}}:5123/chamada/turma/1UNA",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "bearer",
+          "target": "headers",
+          "credentials": {
+            "username": "",
+            "password": "eyJhbGciOiJIUzI1NiJ9.eyJldmVudG8iOnsiaWQiOjExLCJsb2dpbiI6ImoxMSJ9LCJpYXQiOjE3NDUwMjM3NzAsImV4cCI6MTc0NTAzMDk3MH0._1xVGbmjnk85D1vyR5m-uyyXNVJS-yX401aONIM1SpE"
+          }
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"nome\": \"Palestra\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "/chamada/aluno/(s)",
+        "url": "{{L}}:5123/chamada/aluno/02110199",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "bearer",
+          "target": "headers",
+          "credentials": {
+            "username": "",
+            "password": "eyJhbGciOiJIUzI1NiJ9.eyJldmVudG8iOnsiaWQiOjExLCJsb2dpbiI6ImoxMSJ9LCJpYXQiOjE3NDUwMjM3NzAsImV4cCI6MTc0NTAzMDk3MH0._1xVGbmjnk85D1vyR5m-uyyXNVJS-yX401aONIM1SpE"
+          }
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"nome\": \"Palestra\"\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "/chamada",
+        "url": "{{L}}:5123/chamada/",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "bearer",
+          "target": "headers",
+          "credentials": {
+            "username": "",
+            "password": "eyJhbGciOiJIUzI1NiJ9.eyJldmVudG8iOnsiaWQiOjExLCJsb2dpbiI6ImoxMSJ9LCJpYXQiOjE3NDUwMjM3NzAsImV4cCI6MTc0NTAzMDk3MH0._1xVGbmjnk85D1vyR5m-uyyXNVJS-yX401aONIM1SpE"
+          }
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"aluno\": {\n    \"matricula\": \"02110199\",\n    \"turma\": \"EComp-9UNA\"\n  }\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      }
+    ]
+  }
+}

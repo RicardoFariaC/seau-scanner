@@ -15,9 +15,9 @@ async function connect(e) {
         if(data.status == false) {
             document.querySelector("#error").innerText = data.message;
         } else {
-            document.cookie = `${document.cookie};max-age=0;`;
-            document.cookie = `token=${data.jwt};max-age=3600;path=/;SameSite=Lax;`;
-    
+
+            sessionStorage.setItem("token", data.jwt);
+            
             window.location.replace("/frontend/src/scan/index.html");
         }
     } catch(e) {

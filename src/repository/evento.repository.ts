@@ -13,9 +13,15 @@ export default class Evento
             where: {
                 login: {
                     equals: login
-                }
+                },
             }
         })
+    }
+
+    static getById = async (id: number) => {
+        return await prisma.evento.findUnique({
+            where: { id }
+        });
     }
 
     static create = async (data: EventoModel) => {

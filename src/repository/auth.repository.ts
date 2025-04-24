@@ -17,7 +17,7 @@ export default class Auth {
         })
             .setProtectedHeader({ alg: process.env.ALGORITHM || 'HS256' })
             .setIssuedAt()
-            .setExpirationTime(process.env.EXPIRATION_TIME || '2h')
+            .setExpirationTime(process.env.EXPIRATION_TIME || '30min')
             .sign(secret);
         return { status: match, jwt };
     }

@@ -3,11 +3,11 @@ import Evento from '../repository/evento.repository';
 import AuthMiddleware from '../middleware/auth.middleware';
 import Auth from '../repository/auth.repository';
 
-const AuthMiddlewareInstance = new AuthMiddleware(new Auth());
+// const AuthMiddlewareInstance = new AuthMiddleware(new Auth());
 export const router = Router();
 
 
-router.use(AuthMiddlewareInstance.authorize);
+// router.use(AuthMiddlewareInstance.authorize);
 
 router.get("/", async (req: Request, res: Response) => {
     const data = await Evento.getAll()

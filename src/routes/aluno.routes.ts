@@ -6,7 +6,6 @@ import Aluno from '../repository/aluno.repository';
 const AuthMiddlewareInstance = new AuthMiddleware(new Auth());
 export const router = Router();
 
-
 router.use(AuthMiddlewareInstance.authorize);
 
 router.get("/", async (req: Request, res: Response) => {

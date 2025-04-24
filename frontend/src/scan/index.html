@@ -12,12 +12,15 @@
             <h1 class="text-sand text-2xl">Verificação de Credenciamento</h1>
         </div>
         <div class=" text-sand text-2xl">
-            <button class="m-4 p-2 border-1 border-sand active:bg-sand active:text-midnight">SAIR</button>
+            <button id="btn-logout" class="m-4 p-2 border-1 border-sand active:bg-sand active:text-midnight">SAIR</button>
         </div>
         <div class="flex flex-col w-full">
             <div id="reader" class="font-bold flex flex-col bg-sand-steel text-sand w-full m-2 border-2 border-sand">
             </div>
-            <p id="errortag"></p>
+            <div id="errordiv" class="flex justify-center mb-2">
+                <p class="text-sand font-bold mx-2">⚠️</p>
+                <p id="errortag" class="text-sand font-bold text-justify"></p>
+            </div>
             <div id="result" class="flex items-center justify-center">
                 <div class="">
                     <img id="img" class="w-16 h-20 mx-2"/>

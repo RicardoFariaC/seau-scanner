@@ -5,14 +5,19 @@ let html5QrcodeScanner = new Html5QrcodeScanner(
 
 html5QrcodeScanner.render(onScanSuccess.bind(this), onScanFailure.bind(this));
  
+const btnLogout = document.querySelector("#btn-logout");
 const btnConfirm = document.querySelector("#btn-confirm");
 const btnCancel = document.querySelector("#btn-cancel");
 const errorTag = document.querySelector("#errortag");
+const errorDiv = document.querySelector("#errordiv");
+errorDiv.classList.add("hidden");
 errorTag.innerText = "";
 
 btnConfirm.addEventListener("click", confirmScan);
 btnCancel.addEventListener("click", resetScan);
+btnLogout.addEventListener("click", logout);
 
+console.log(sessionStorage.getItem("token"));
 /* -- FUNCTIONS SECTION -- */
 
 
@@ -22,9 +27,7 @@ btnCancel.addEventListener("click", resetScan);
  * @param {*} decodedText 
  */
 function onScanSuccess(decodedText) {
-    if(errorTag) {
-        errorTag.innerText = "";
-    }
+    errorDiv.classList.add("hidden");
 
     if(String(decodedText).includes("univap.br/ID/")) {
         document.querySelector("#btn-confirm").disabled = false;
@@ -59,7 +62,8 @@ function onScanSuccess(decodedText) {
  * @param {*} error 
  */
 function onScanFailure(error) {
-    document.querySelector("#error").innerText = error;
+    // errorDiv.classList.remove("hidden");
+    // errorTag.innerText = error;
 }
 
 
@@ -68,9 +72,35 @@ function onScanFailure(error) {
  * @param {*} event 
  */
 function confirmScan(event) {
-    resetScan();
+    const matricula = document.querySelector("#ra").innerText;
+    const turma = document.querySelector("#turma").innerText;
 
-    fetch("/")
+    resetScan(event);
+
+    fetch("http://localhost:5123/chamada", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + sessionStorage.getItem("token")
+        },
+        body: JSON.stringify({
+            aluno: {
+                matricula: matricula,
+                turma: turma
+            }
+        })
+    })
+        .then(response => {
+            if(response.ok) {
+                return response.json();
+            } else {
+                response.json().then((data) => {
+                    errorDiv.classList.remove("hidden");
+                    errorTag.innerText = data.message;
+                    throw new Error("Services cannot be completed.");
+                })
+            }
+        })
 
 }
 
@@ -90,7 +120,6 @@ function resetScan(event) {
     html5QrcodeScanner.resume();
 }
 
-
 /**
  * use this function to set an attribute of an element. 
  * pass the elementId and the options object.
@@ -99,6 +128,9 @@ function resetScan(event) {
  *  type: "src" | "text" | "class",
  *  value: "value"
  * };
+ * 
+ * @param {string} elementId
+ * @param {object} opts  
 */
 function setAttribute(elementId, opts) {
     const element = document.getElementById(elementId);
@@ -134,4 +166,12 @@ function setAttribute(elementId, opts) {
 
 function clearAttribute(elementId, opts) {
     setAttribute(elementId, {type: opts.type, value: ""});
+}
+
+/**
+ * function to clear session tokens and takes user to login page.
+ */
+function logout() {
+    sessionStorage.clear();
+    window.location.replace("../")
 }
