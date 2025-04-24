@@ -7,6 +7,7 @@ import { decodeJwt } from "jose";
 const AuthMiddlewareInstance = new AuthMiddleware(new Auth())
 export const router = Router();
 
+router.use(AuthMiddlewareInstance.authorize);
 
 router.get("/", async (req: Request, res: Response) => {
     const data = await Chamada.getAll();

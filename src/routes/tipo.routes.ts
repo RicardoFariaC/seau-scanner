@@ -7,7 +7,7 @@ import { create, findAll } from '../handlers/tipo.handlers';
 const AuthMiddlewareInstance = new AuthMiddleware(new Auth());
 export const router = Router();
 
-// router.use(AuthMiddlewareInstance.authorize);
+router.use(AuthMiddlewareInstance.authorize);
 
 router.get("/", findAll);
 
