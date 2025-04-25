@@ -3,7 +3,7 @@ async function connect(e) {
     e.preventDefault();
     const formData = new FormData(form);
     try {
-        const response = await fetch("http://localhost:5123/login", {
+        const response = await fetch("http://feau.univap:5123/login", {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

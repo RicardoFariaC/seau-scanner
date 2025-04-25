@@ -16,8 +16,6 @@ exports.router.post("/login", async (req, res) => {
             let data_limite = new Date(evento.data_periodo);
             let now = new Date();
             data_limite.setHours(data_limite.getHours() + 3, data_limite.getMinutes() + 40);
-            console.log(data_limite.toString());
-            console.log(now.toString());
             if (data_limite.getTime() < now.getTime()) {
                 return res.send({ status: false, jwt: null, message: "O período de inscrição no evento terminou." });
             }

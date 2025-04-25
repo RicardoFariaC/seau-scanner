@@ -55,8 +55,7 @@ const res = {
 const next = jest.fn();
 describe("GET - FindAll", () => {
     it("should return 200 http status code and a message", async () => {
-        tipo_repository_1.default.getAll
-            .mockResolvedValue(jestFindAllMock);
+        tipo_repository_1.default.getAll.mockResolvedValue(jestFindAllMock);
         await TipoHandler.findAll(req, res, next);
         expect(res.status).toHaveBeenCalledWith(200);
         expect(res.json).toHaveBeenCalledWith(commonResponse(true, jestFindAllMock));

@@ -3,3 +3,6 @@ node_modules
 *.env
 prisma/generated/
 storage/
+dist/
+frontend/dist
+frontend/src/dist

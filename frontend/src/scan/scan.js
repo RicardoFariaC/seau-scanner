@@ -1,3 +1,5 @@
+import { Html5QrcodeScanner } from "html5-qrcode";
+
 let html5QrcodeScanner = new Html5QrcodeScanner(
     "reader",
     { fps: 10, qrbox: {width: 250, height: 250}, facingMode: "environment" },
@@ -77,7 +79,7 @@ function confirmScan(event) {
 
     resetScan(event);
 
-    fetch("http://localhost:5123/chamada", {
+    fetch("http://feau.univap:5123/chamada", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
