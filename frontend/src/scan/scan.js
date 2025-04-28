@@ -174,7 +174,8 @@ function clearAttribute(elementId, opts) {
 /**
  * function to clear session tokens and takes user to login page.
  */
-function logout() {
+function logout(event) {
+    event.preventDefault();
     sessionStorage.clear();
     window.location.replace("index.html")
 }
