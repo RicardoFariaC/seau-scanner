@@ -3,7 +3,8 @@ async function connect(e) {
     e.preventDefault();
     const formData = new FormData(form);
     try {
-        const response = await fetch("http://feau.univap:5123/login", {
+        const url = import.meta.env.VITE_URL ?? "http://localhost:5123";
+        const response = await fetch(url + "/login" , {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -18,7 +19,7 @@ async function connect(e) {
 
             sessionStorage.setItem("token", data.jwt);
             
-            window.location.replace("/frontend/src/scan/index.html");
+            window.location.replace("scan");
         }
     } catch(e) {
         console.error(e);

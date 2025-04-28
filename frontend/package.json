@@ -6,7 +6,8 @@
   "scripts": {
     "tailwind": "tailwindcss -i ./src/index.css -o ./src/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build"
+    "build": "vite build",
+    "start": "vite"
   },
   "keywords": [],
   "author": "",

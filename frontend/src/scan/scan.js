@@ -78,8 +78,9 @@ function confirmScan(event) {
     const turma = document.querySelector("#turma").innerText;
 
     resetScan(event);
+    const url = import.meta.env.VITE_URL ?? "http://localhost:5123";
 
-    fetch("http://feau.univap:5123/chamada", {
+    fetch(url + "/chamada", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -175,5 +176,5 @@ function clearAttribute(elementId, opts) {
  */
 function logout() {
     sessionStorage.clear();
-    window.location.replace("../")
+    window.location.replace("/frontend/src/index.html")
 }
