@@ -176,5 +176,5 @@ function clearAttribute(elementId, opts) {
  */
 function logout() {
     sessionStorage.clear();
-    window.location.replace("/frontend/src/index.html")
+    window.location.replace("index.html")
 }

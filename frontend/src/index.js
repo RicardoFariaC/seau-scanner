@@ -19,7 +19,7 @@ async function connect(e) {
 
             sessionStorage.setItem("token", data.jwt);
             
-            window.location.replace("scan");
+            window.location.replace("scan.html");
         }
     } catch(e) {
         console.error(e);
