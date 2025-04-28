@@ -34,7 +34,7 @@ function onScanSuccess(decodedText) {
     if(String(decodedText).includes("univap.br/ID/")) {
         document.querySelector("#btn-confirm").disabled = false;
         document.querySelector("#btn-cancel").disabled = false;
-        fetch("https://cors-anywhere.herokuapp.com/"+decodedText) // TODO: Remove this CORS proxy
+        fetch(decodedText) // TODO: Remove this CORS proxy
             .then(response => {
                 return response.text();
             })
