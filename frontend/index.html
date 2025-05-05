@@ -6,32 +6,52 @@
     <link rel="stylesheet" href="src/output.css">
     <title>Entrar | SEAU Credenciamento</title>
 </head>
-<body>
-    <img src="/assets/jornadas.png" alt="" srcset="" class="absolute top-0 left-1/2 transform -translate-x-1/2 mt-4 w-4/5 md:w-1/4">
+<body class="bg-snow-white">
     <form method="post" id="mainform" class="h-screen">
-        <div class="flex bg-midnight h-full w-full items-center justify-center">
-            <div class="bg-midnight m-2 p-4 border-2 border-sand">
-                <h3 class="mb-2.5 text-2xl text-center text-sand">Faça o login com as credenciais do evento</h3>
-                <!-- FORM -->
-                <label for="login" class="text-sand">Login</label>
-                <input type="text" name="login" id="login" placeholder="J00"
-                    class="mb-2.5 w-full px-2 py-3 rounded-md text-2xl text-sand border-1"
-                    required
-                >
-
-                <label for="senha" class="text-sand">Senha</label>
-                <input type="password" name="senha" id="senha" placeholder="*****"
-                    class="mb-2.5 w-full px-2 py-3 rounded-md text-2xl text-sand border-1"
-                    required
-                >
-                
-                <button id="send" class="text-sand mt-2.5 p-3 rounded-md w-full bg-sand-steel text-2xl">Entrar</button>
-                <!-- END FORM -->
-
-                <div id="error" class="mt-2 flex items-center justify-center text-sand text-xl text-justify"></div>
-            </div>
+      <div class="flex flex-col items-center h-full px-0">
+        <img 
+          src="./public/assets/JORNADAS-P.png" 
+          alt="Logo"
+          class="my-6 w-4/5 max-w-xs md:max-w-sm lg:max-w-md"
+        />
+  
+        <!-- Login box -->
+        <div class="bg-red-hood p-4 w-full max-w-md border  border-red-hood outline -outline-offset-4 outline-snow-white">
+          <h3 class="mb-2.5 text-2xl text-center text-snow-white">
+            Faça o login com as credenciais do evento
+          </h3>
+  
+          <label for="login" class="text-snow-white">Login</label>
+          <input 
+            type="text" 
+            name="login" 
+            id="login" 
+            placeholder="J00"
+            class="mb-2.5 w-full px-2 py-3 rounded-md text-2xl text-snow-white border border-snow-white bg-transparent"
+            required
+          >
+  
+          <label for="senha" class="text-snow-white">Senha</label>
+          <input 
+            type="password" 
+            name="senha" 
+            id="senha" 
+            placeholder="*****"
+            class="mb-2.5 w-full px-2 py-3 rounded-md text-2xl text-snow-white border border-snow-white bg-transparent"
+            required
+          >
+  
+          <button 
+            id="send" 
+            class="mt-2.5 p-3 rounded-md w-full border border-snow-white bg-snow-white text-red-hood text-2xl active:bg-red-hood active:text-snow-white"
+          >
+            Entrar
+          </button>
+  
+          <div id="error" class="mt-2 text-snow-white text-xl text-center"></div>
         </div>
-    </form>  
+      </div>
+    </form>
 </body>
 <script type="module" src="src/index.js"></script>
 </html>

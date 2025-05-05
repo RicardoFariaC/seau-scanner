@@ -3,7 +3,7 @@ async function connect(e) {
     e.preventDefault();
     const formData = new FormData(form);
     try {
-        const url = import.meta.env.VITE_URL ?? "http://localhost:5123";
+        const url = "http://localhost:5123";
         const response = await fetch(url + "/login" , {
             method: "POST",
             headers: {'Content-Type': 'application/json'},

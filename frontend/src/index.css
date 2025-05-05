@@ -3,5 +3,10 @@
 @theme {
     --color-sand: #cac2b6;
     --color-midnight: #04173b;
-    --color-sand-steel: #5c6573; 
+    --color-sand-steel: #5c6573;
+    
+    --color-snow-white: #fefeff;
+    --color-red-hood: #f80e2d;
+    --color-blue-cinderella: #2a68b5;
+    --color-gray-elsa: #ebe7e2;
 }
