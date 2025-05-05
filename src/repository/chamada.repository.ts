@@ -29,6 +29,7 @@ export default class Chamada {
           select: {
             id: true,
             matricula: true,
+            nome: true,
             turma: true,
             chamada: {
               orderBy: {
@@ -72,6 +73,7 @@ export default class Chamada {
             aluno = await prisma.aluno.create({
                 data: {
                     matricula: data.aluno!.matricula,
+                    nome: data.aluno!.nome,
                     turma: data.aluno!.turma
                 }
             });

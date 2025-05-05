@@ -75,6 +75,7 @@ function onScanFailure(error) {
  */
 function confirmScan(event) {
     const matricula = document.querySelector("#ra").innerText;
+    const nome = document.querySelector("#nome").innerText;
     const turma = document.querySelector("#turma").innerText;
 
     resetScan(event);
@@ -89,6 +90,7 @@ function confirmScan(event) {
         body: JSON.stringify({
             aluno: {
                 matricula: matricula,
+                nome: nome,
                 turma: turma
             }
         })

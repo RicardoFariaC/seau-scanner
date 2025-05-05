@@ -23,6 +23,7 @@ model Tipo {
 model Aluno {
   id Int @id @default(autoincrement())
   matricula String @db.VarChar(8)
+  nome String @db.VarChar(500)
   turma String @db.VarChar(255)
   chamada Chamada[]
 }

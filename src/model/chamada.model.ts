@@ -3,6 +3,7 @@ export interface ChamadaModel {
     alunoId?: number;
     aluno?: {
         matricula: string;
+        nome: string;
         turma: string;
     };
 }
