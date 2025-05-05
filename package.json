@@ -1,6 +1,6 @@
 {
   "name": "seau",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "server.ts",
   "scripts": {
     "dev": "npx prisma generate && nodemon src/server.ts",

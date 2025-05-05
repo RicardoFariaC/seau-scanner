@@ -23,10 +23,10 @@ app.use('/evento', evento);
 app.use('/tipo', tipo);
 app.use('/chamada', chamada);
 
-// app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-//     writeError(err);
-//     res.status(500).json({ status: false, message: "Algo não saiu como esperado." })
-// });
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+    writeError(err);
+    res.status(500).json({ status: false, message: "Algo não saiu como esperado." })
+});
 
 app.listen(5123, () => {
     console.log('Server is running on port 5123')
