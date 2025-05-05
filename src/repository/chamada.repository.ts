@@ -22,39 +22,32 @@ export default class Chamada {
     }
 
     static getByTurma = async (turma: string) => {
-        return await prisma.chamada.findMany({
-            where: {
-              aluno: {
-                turma: turma
-              }
-            },
-            orderBy: {
-              eventoId: "asc"
-            },
-            select: {
-              evento: {
-                select: {
-                  id: true,
-                  nome: true,
-                  data_periodo: true,
-                  chamada: {
-                    select: {
-                      aluno: {
-                        select: {
-                          matricula: true,
-                          turma: true
-                        }
-                      }
+        return await prisma.aluno.findMany({
+          where: {
+            turma: turma
+          },
+          select: {
+            id: true,
+            matricula: true,
+            turma: true,
+            chamada: {
+              orderBy: {
+                eventoId: 'asc'
+              },
+              select: {
+                evento: {
+                  select: {
+                    login: true,
+                    nome: true,
+                    tipo: {
+                      select: { nome: true }
                     },
-                    where: {
-                      aluno: {
-                        turma: turma
-                      }
-                    }
+                    data_periodo: true
                   }
                 }
               }
             }
+          }
           });
     }
 
